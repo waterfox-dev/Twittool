@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200&family=Quicksand:wght@500&family=Zen+Kaku+Gothic+New:wght@300&display=swap');
+body{
+    background-color:rgb(255, 254, 254);
+    color: #353535;  
+    width: 90%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.columnCategories{
+    float: left;
+    background-color: #353535;
+    color : rgb(255, 254, 254);
+    margin-right: 10%;
+    text-align: center;
+    width: 10%;
+}
