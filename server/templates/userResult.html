@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twittool</title>
+        <link href="{{url_for('static', filename = 'style/userResult.css')}}" rel = 'stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="headerContainer">
+            <img src="{{user['profile_banner']}}" alt="Snow" style="width:50%; border-radius : 1ch;">
+            <div class="centeredLeft">{{user['name']}}</div>
+            <div class="centeredRight"><img src = "{{user['profile_image']}}" style="width: 200%; border-radius : 5ch;"></div>
+        </div>
+    </body>
+</html>

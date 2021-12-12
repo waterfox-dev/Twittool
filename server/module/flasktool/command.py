@@ -3,6 +3,6 @@ def create_page(name : str, *args):
     script = open(f"server/static/script/{name}.js", 'x')
     style = open(f"server/static/style/{name}.css",  'x')
 
-    template.close
-    script.close
-    style.close
+    template.close()
+    script.close()
+    style.close()

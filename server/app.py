@@ -1,6 +1,7 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request
 from server.router import router
+from server.module.twittool.account import Account, UserNotFound
 
 app       = Flask(__name__)
 debug     = True
@@ -16,3 +17,11 @@ def index():
 def infos():
     if debug :
         return render_template(router['infos'])
+
+@app.route('/user_result', methods = ['GET', 'POST'])
+def user_result():
+    result = dict(request.form) 
+    try :
+        return render_template(router['user_result'], user = Account(result['userQuery']).serialize())
+    except UserNotFound :
+        return render_template(router['user_not_found'], arobase = result['userQuery'])

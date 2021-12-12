@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+    color: #d9d9d9;
+    background-color: #111111;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 40px;
+}
+
+.title
+{
+    font-family: 'Merriweather Sans', sans-serif;
+    color: #ffffff;
+    font-size: 60px;
+}
+
+.userResearchForm
+{
+    text-align: center;
+    margin-top: 8%;
+}
+
+.userResearchInput
+{
+    border: none;
+    background-color: #333333;
+    color : #d9d9d9;
+    font-size: 30px;
+    border-radius: 0.5ch;
+}
+
+.userResearchSubmit
+{
+    border: none;
+    background-color: #333333;
+    font-size: 28px;
+    border-radius: 0.5ch;
+}

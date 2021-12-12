@@ -4,13 +4,16 @@ import json
 from requests.api import head, request
 
 def _read_api_data():
-    with open("data/twitterApi.json", 'r', encoding='utf8') as r_file :
+    with open("server/data/twitterApi.json", 'r', encoding='utf8') as r_file :
         r_file = json.load(r_file)
         return dict(r_file)
 
 def _write_api_result(content : str):
     with open("result.json", 'w', encoding='utf8') as w_file:
         json.dump(content, w_file)
+
+class UserNotFound(Exception):
+    pass
 
 class _Client_Data :    
     def __init__(self) :
@@ -45,7 +48,20 @@ class Account :
         self._account_data = self._client_instance.d_request(self.at)
         
     def serialize(self):
-        self.id = self._account_data['id']
-        self.name = self._account_data['name']
-        self.description = self._account_data['description']
+        try :
+            self.id = self._account_data['id']
+            self.name = self._account_data['name']
+            self.description = self._account_data['description']
+            self.followers = self._account_data['followers_count']
+            self.followings = self._account_data['friends_count']
+            self.profile_image = self._account_data['profile_image_url_https']
+            self.profile_banner = self._account_data['profile_banner_url']
+            
+            return self.__dict__
+
+        except:
+            raise UserNotFound
+
+
+
 
