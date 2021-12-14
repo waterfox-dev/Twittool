@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class _BinaryColor :
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -13,17 +15,17 @@ class Printer :
 
     @staticmethod
     def log(context : str, message : str) :
-        print(f"[{context}] - {message}")
+        print(f"[{context}][{datetime.now()}] - {message}")
     
     @staticmethod
     def warn(context : str, message : str) :
-        print(f"{_BinaryColor.WARNING}[{context}] - {message}{_BinaryColor.ENDC}")
+        print(f"{_BinaryColor.WARNING}[{context}][{datetime.now()}] - {message}{_BinaryColor.ENDC}")
 
     @staticmethod
     def fail(context : str, message : str) :
-        print(f"{_BinaryColor.FAIL}[{context}] - {message}{_BinaryColor.ENDC}")    
+        print(f"{_BinaryColor.FAIL}[{context}][{datetime.now()}] - {message}{_BinaryColor.ENDC}")    
     
     @staticmethod
     def ask(context : str, message : str):
-        result = input(f"{_BinaryColor.OKBLUE}[{context}] - {message}{_BinaryColor.ENDC}")    
+        result = input(f"{_BinaryColor.OKBLUE}[{context}][{datetime.now()}] - {message}{_BinaryColor.ENDC}")    
         return result
