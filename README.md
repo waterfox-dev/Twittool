@@ -1,9 +1,20 @@
-# Twittool - IN DEV -> Majors issues
+# Twittool 
 
-## WARNING ! 
-The code will be don't work on your machine for a lof of reasons :
-- No API datas 
-- No Specifics libraries 
-- And the code is not completed 
+For the moment, this app is under development, it is unusable and this repository exists only to participate in the development of it.
 
-I put this project on public view just for share my ideas, don't use them for the moment. Please wait the API. 
+### __Before to continue...__
+
+If you want to dev this app, you need to know some details. 
+
+Firstly, you need your own API key and authentication to test this app. For the system use your API credentials, you will be create a folder in `server` and call it `data`,  and you need to create a file : `twitterApi.json`. Content of `server/data/twitterApi.json`:
+
+```json
+{
+    "api_key" : "your api key",
+    "api_secret_key" : "Your api secret key",
+    "bearer_token" : "Your bearer token"
+} 
+```
+
+Also, you need to install the Flask library (for the moment not any kind of transition to Django are planned). 
+
